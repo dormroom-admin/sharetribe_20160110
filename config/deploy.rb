@@ -77,6 +77,15 @@ namespace :deploy do
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
+
+  set :default_environment, {
+    'PATH'         => "~/.rvm/gems/ruby-2.1.2/bin",
+    'RUBY_VERSION' => 'ruby 2.1.2',
+    'GEM_HOME'     => '~/.rvm/gems/ruby-2.1.2',
+    'GEM_PATH'     => '~/.rvm/gems/ruby-2.1.2',
+    'BUNDLE_PATH'  => '~/.rvm/gems/ruby-2.1.2'
+  }
+
 end
 
 # ps aux | grep puma    # Get puma pid
