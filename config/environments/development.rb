@@ -81,4 +81,7 @@ Kassi::Application.configure do
 
   # Automatically inject JavaScript needed for LiveReload
   config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+
+  # As per the online documentation, setting this value to 'false'
+  config.eager_load = false
 end

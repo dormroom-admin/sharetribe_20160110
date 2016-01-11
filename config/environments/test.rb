@@ -61,4 +61,7 @@ Kassi::Application.configure do
 
   # For tests we want the observer that sync runs delayed jobs
   config.active_record.observers = :sync_delayed_job_observer
+
+  # As per the online documenation, setting this value to 'false'
+  config.eager_load = false
 end

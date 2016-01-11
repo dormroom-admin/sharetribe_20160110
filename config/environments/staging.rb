@@ -107,4 +107,7 @@ Kassi::Application.configure do
   }
 
   ActionMailer::Base.perform_deliveries = true # the "deliver_*" methods are available
+
+  # As per the online documentation, setting this value to 'false'
+  config.eager_load = false
 end
